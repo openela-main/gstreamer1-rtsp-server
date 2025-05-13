@@ -1,14 +1,13 @@
 %global         majorminor      1.0
 
 Name:           gstreamer1-rtsp-server
-Version:        1.22.1
-Release:        1%{?dist}
+Version:        1.22.12
+Release:        3%{?dist}
 Summary:        GStreamer RTSP server library
 
-License:        LGPLv2+
+License:        LGPL-2.0-or-later AND LGPL-2.1-only
 URL:            http://gstreamer.freedesktop.org/
 Source0:        http://gstreamer.freedesktop.org/src/gst-rtsp/gst-rtsp-server-%{version}.tar.xz
-Source1:	gating.yaml
 
 BuildRequires:  meson >= 0.48.0
 BuildRequires:  gcc
@@ -85,9 +84,46 @@ chrpath --delete %{buildroot}%{_libdir}/libgstrtspserver-%{majorminor}.so*
 %endif
 
 %changelog
-* Fri Apr 28 2023 Wim Taymans <wtaymans@redhat.com> - 1.22.1-1
-- Import
-- Resolves: rhbz#2186498
+* Sat Nov 09 2024 Wim Taymans <wtaymans@redhat.com> - 1.22.12-3
+- Rebuild
+- Resolves: RHEL-38511, RHEL-41157
+
+* Fri Nov 08 2024 Wim Taymans <wtaymans@redhat.com> - 1.22.12-2
+- Rebuild
+- Resolves: RHEL-38511, RHEL-41157
+
+* Tue Apr 30 2024 Gwyn Ciesla <gwync@protonmail.com> - 1.22.12-1
+- 1.22.12
+
+* Thu Apr 18 2024 Gwyn Ciesla <gwync@protonmail.com> - 1.22.11-1
+- 1.22.11
+
+* Thu Jan 25 2024 Gwyn Ciesla <gwync@protonmail.com> - 1.22.9-1
+- 1.22.9
+
+* Wed Jan 24 2024 Fedora Release Engineering <releng@fedoraproject.org> - 1.22.8-3
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_40_Mass_Rebuild
+
+* Sat Jan 20 2024 Fedora Release Engineering <releng@fedoraproject.org> - 1.22.8-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_40_Mass_Rebuild
+
+* Mon Dec 18 2023 Gwyn Ciesla <gwync@protonmail.com> - 1.22.8-1
+- 1.22.8
+
+* Tue Nov 14 2023 Gwyn Ciesla <gwync@protonmail.com> - 1.22.7-1
+- 1.22.7
+
+* Fri Jul 21 2023 Wim Taymans <wtaymans@redhat.com> - 1.22.5-1
+- Update to 1.22.5
+
+* Thu Jul 20 2023 Fedora Release Engineering <releng@fedoraproject.org> - 1.22.3-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_39_Mass_Rebuild
+
+* Thu May 25 2023 Wim Taymans <wtaymans@redhat.com> - 1.22.3-1
+- Update to 1.22.3
+
+* Thu Apr 13 2023 Wim Taymans <wtaymans@redhat.com> - 1.22.2-1
+- Update to 1.22.2
 
 * Mon Mar 13 2023 Wim Taymans <wtaymans@redhat.com> - 1.22.1-1
 - Update to 1.22.1
