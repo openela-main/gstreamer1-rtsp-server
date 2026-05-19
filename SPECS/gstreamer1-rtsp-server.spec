@@ -1,8 +1,8 @@
 %global         majorminor      1.0
 
 Name:           gstreamer1-rtsp-server
-Version:        1.24.11
-Release:        1%{?dist}
+Version:        1.26.7
+Release:        2%{?dist}
 Summary:        GStreamer RTSP server library
 
 License:        LGPL-2.0-or-later AND LGPL-2.1-only
@@ -84,6 +84,14 @@ chrpath --delete %{buildroot}%{_libdir}/libgstrtspserver-%{majorminor}.so*
 %endif
 
 %changelog
+* Wed Nov 05 2025 Wim Taymans <wtaymans@redhat.com> - 1.26.7-2
+- Update to 1.26.7
+  Resolves: RHEL-126057
+
+* Tue Jun 17 2025 Wim Taymans <wtaymans@redhat.com> - 1.26.2-1
+- Update to 1.26.2
+  Resolves: DESKTOP-1858
+
 * Tue Jan 14 2025 Wim Taymans <wtaymans@redhat.com> - 1.24.11-1
 - Update to 1.24.11
   Resolves: RHEL-73678
